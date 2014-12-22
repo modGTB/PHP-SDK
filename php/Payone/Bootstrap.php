@@ -41,7 +41,7 @@ class Payone_Bootstrap
 
     protected function initPayone()
     {
-        require_once 'Payone/Autoload.php';
+        require_once dirname(__FILE__).'/Autoload.php';
         new Payone_Autoload();
     }
 

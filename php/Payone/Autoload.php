@@ -40,7 +40,7 @@ class Payone_Autoload
     {
         if (substr($class, 0, strlen(self::CLASS_PREFIX)) === self::CLASS_PREFIX) {
             $classFile = str_replace(' ', DIRECTORY_SEPARATOR, ucwords(str_replace('_', ' ', $class))) . '.php';
-            require_once($classFile);
+            require_once(dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.$classFile);
         }
     }
 }
